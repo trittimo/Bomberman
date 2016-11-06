@@ -1,10 +1,12 @@
 package trittimo.components.pieces;
 
+import java.awt.Graphics;
+
 import javax.swing.JComponent;
 
 import trittimo.components.Screen;
 
-public abstract class Entity extends JComponent {
+public abstract class Entity {
 	public int x;
 	public int y;
 	
@@ -14,7 +16,6 @@ public abstract class Entity extends JComponent {
 		this.screen = s;
 		this.x = xp;
 		this.y = yp;
-		this.setLocation(xp * Screen.GRID_SIZE, yp * Screen.GRID_SIZE);
 	}
 	
 	public Entity(Screen screen) {
@@ -30,7 +31,8 @@ public abstract class Entity extends JComponent {
 		}
 		this.x = ax;
 		this.y = ay;
-		this.setLocation(x * Screen.GRID_SIZE, y * Screen.GRID_SIZE);
 		return true;
 	}
+	
+	public abstract void paintComponent(Graphics g);
 }

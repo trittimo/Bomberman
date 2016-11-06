@@ -1,5 +1,6 @@
 package trittimo.components;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -64,17 +65,18 @@ public class Screen extends JPanel {
               @Override
               public void keyReleased(KeyEvent e) {}
 		});
+        
+        this.repaint();
 	}
 	
 	public void addEntity(Entity e) {
-		this.add(e);
         this.entities.add(e);
 	}
 	
 	public Player loadLevel(int level) throws IOException {
 		Player player = null;
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("resource/level" + level));
+			BufferedReader reader = new BufferedReader(new FileReader("src/resource/level" + level));
 			String line;
 			for (int y = 0; y < 16; y++) {
 				line = reader.readLine();
@@ -92,9 +94,6 @@ public class Screen extends JPanel {
 					case 'P': // player
 						player = new Player(this, x, y);
 						addEntity(player);
-						break;
-					case 'B': // bomb
-						addEntity(new Bomb(this, x, y));
 						break;
 					case 'Z': // door
 						addEntity(new Door(this, x, y));
@@ -115,7 +114,9 @@ public class Screen extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+		for (Entity e : this.entities) {
+			e.paintComponent(g);
+		}
 		// Do rendering stuff here
 	}
 }

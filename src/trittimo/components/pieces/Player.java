@@ -10,9 +10,7 @@ public class Player extends Entity {
 		super(screen, x, y);
 	}
 
-	@Override
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
 		// do what want
 	}
 }

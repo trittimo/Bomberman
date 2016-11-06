@@ -11,11 +11,11 @@ public class Wall extends Entity {
 		super(screen, x, y);
 	}
 	
-	@Override
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		g.drawRect(this.x, this.y, 50, 50);
 		g.setColor(Color.CYAN);
+		g.fillRect(this.x * Screen.GRID_SIZE, this.y * Screen.GRID_SIZE, Screen.GRID_SIZE, Screen.GRID_SIZE);
+		g.setColor(Color.BLACK);
+		g.drawRect(this.x * Screen.GRID_SIZE, this.y * Screen.GRID_SIZE, Screen.GRID_SIZE, Screen.GRID_SIZE);
 	}
 
 }

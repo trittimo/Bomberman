@@ -34,8 +34,7 @@ public class Bomb extends Entity {
 
 	@Override
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
 		g.setColor(Color.BLACK);
-		g.drawOval(this.x, this.y, 50, 50);
+		g.fillOval(this.x * Screen.GRID_SIZE, this.y * Screen.GRID_SIZE, 50, 50);
 	}
 }
