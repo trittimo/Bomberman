@@ -1,10 +1,9 @@
 package trittimo.components.pieces;
 
-import trittimo.components.Screen;
+import javax.swing.JComponent;
 
-public abstract class Entity {
+public abstract class Entity extends JComponent {
 	public int x;
 	public int y;
 	
-	public abstract void update(Screen screen);
 }

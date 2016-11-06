@@ -1,8 +1,8 @@
 xxxxxxxxxxxxxxxx
 xP             x
-xWW WW      E  x
-x     WW       x
-x     WW       x
+xDD DD      D  x
+x     DD       x
+x     DD       x
 x   E          x
-x          W   x
+x          D   x
 xxxxxxxxxxxxxxxx
