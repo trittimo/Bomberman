@@ -17,6 +17,7 @@ public class Screen extends JPanel {
 		this.setMinimumSize(new Dimension(800, 800));
 		
 		// load l0
+		
 	}
 	
 	@Override

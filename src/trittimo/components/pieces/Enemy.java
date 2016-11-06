@@ -4,4 +4,8 @@ import trittimo.components.Screen;
 
 public class Enemy extends Entity {
 
+	public Enemy(Screen screen) {
+		super(screen);
+	}
+
 }
