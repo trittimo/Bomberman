@@ -7,8 +7,8 @@ import trittimo.components.Screen;
 
 public class Wall extends Entity {
 
-	public Wall(Screen screen) {
-		super(screen);
+	public Wall(Screen screen, int x, int y) {
+		super(screen, x, y);
 	}
 	
 	@Override

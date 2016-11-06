@@ -1,8 +1,16 @@
-xxxxxxxxxxxxxxxx
-xP             x
-xDD DD      D  x
-x     DD       x
-x     DD       x
-x   E          x
-x          D   x
-xxxxxxxxxxxxxxxx
+WWWWWWWWWWWWWWWW
+WP             W
+WDD BD      D  W
+W     DD       W
+W     DD       W
+W   E          W
+W          B   W
+W              W
+W   D          W
+W              W
+W    D         W
+W      D       W
+W     DD       W
+W              W
+W              W
+WWWWWWWWWWWWWWWW
