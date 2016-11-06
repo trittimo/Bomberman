@@ -34,5 +34,14 @@ public abstract class Entity {
 		return true;
 	}
 	
+	/**
+	 * Update tick
+	 * @return True if we need to remove it
+	 */
+	public boolean tick() {
+		//by default do nothing
+		return false;
+	}
+	
 	public abstract void paintComponent(Graphics g);
 }
