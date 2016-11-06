@@ -23,6 +23,7 @@ public abstract class Entity {
 	}
 	
 	public boolean attemptMove(int ax, int ay) {
+		//System.out.println("Attempting move to: (" + ax + ", " + ay + ")");
 		//check if occupied
 		for (Entity e: screen.entities) {
 			if ((e.x == ax) && (e.y == ay))

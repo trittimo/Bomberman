@@ -40,33 +40,9 @@ public class Screen extends JPanel {
 		}
 		
 		//add listener
-        this.addKeyListener(new KeyListener(){
-              @Override
-              public void keyPressed(KeyEvent e) {
-                 switch (e.getKeyCode()) {
-                   case KeyEvent.VK_W:
-                      player.attemptMove(player.x, player.y + 1);
-                      break;
-                   case KeyEvent.VK_A:    
-                      player.attemptMove(player.x - 1, player.y);
-                      break;
-                   case KeyEvent.VK_S:
-                      player.attemptMove(player.x, player.y - 1);
-                      break;
-                   case KeyEvent.VK_D:
-	                  player.attemptMove(player.x + 1, player.y);
-	                  break;
-                   case KeyEvent.VK_SPACE:
-                      Screen.this.addEntity(new Bomb(Screen.this, player.x, player.y));
-                 }
-              }
-              @Override
-              public void keyTyped(KeyEvent e) {}
-              @Override
-              public void keyReleased(KeyEvent e) {}
-		});
         
-        this.repaint();
+		
+		this.repaint();
 	}
 	
 	public void addEntity(Entity e) {
