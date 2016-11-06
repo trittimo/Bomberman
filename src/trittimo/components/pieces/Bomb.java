@@ -8,7 +8,7 @@ import java.util.TimerTask;
 import trittimo.components.Screen;
 
 public class Bomb extends Entity {
-	public static final int SECONDS_TO_BLOW = 5000;
+	public static final int EXPLODE_AFTER_MS = 5000;
 	
 	private long timeCreated;
 
@@ -21,7 +21,10 @@ public class Bomb extends Entity {
 	 * check if need to dies
 	 */
 	public boolean tick() {
-		//todo
+		if (System.currentTimeMillis() > (timeCreated + EXPLODE_AFTER_MS)) {
+			this.explode();
+			return true;
+		}
 		return false;
 	}
 	
