@@ -23,6 +23,7 @@ public class Player extends Entity {
 	}
 
 	public void paintComponent(Graphics g) {
-		g.drawImage(this.i, this.x * Screen.GRID_SIZE, this.y * Screen.GRID_SIZE, this.screen);
+		System.out.printf("(%d %d)", x, y);
+		g.drawImage(this.i, x * Screen.GRID_SIZE, y * Screen.GRID_SIZE, this.screen);
 	}
 }

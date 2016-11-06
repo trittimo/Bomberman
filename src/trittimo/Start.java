@@ -22,7 +22,7 @@ public class Start {
 				case KeyEvent.VK_W:
 					screen.player.attemptMove(screen.player.x, screen.player.y + 1);
 					break;
-				case KeyEvent.VK_A:    
+				case KeyEvent.VK_A:
 					screen.player.attemptMove(screen.player.x - 1, screen.player.y);
 					break;
 				case KeyEvent.VK_S:

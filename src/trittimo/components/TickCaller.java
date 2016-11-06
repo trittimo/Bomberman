@@ -3,6 +3,7 @@ package trittimo.components;
 import java.util.ArrayList;
 
 import trittimo.components.pieces.Bomb;
+import trittimo.components.pieces.Entity;
 
 public class TickCaller implements Runnable {
 	private Screen screen;
@@ -21,15 +22,16 @@ public class TickCaller implements Runnable {
 	@Override
 	public void run() {
 		last = System.currentTimeMillis();
+		long sleepFor;
+		Entity e;
 		while (run) {
-			for (int i = 0; i < screen.entities.size(); i++)
-				if (screen.entities.get(i).tick()) // if true, then delete
+			for (int i = 0; i < screen.entities.size(); i++) {
+				e = screen.entities.get(i);
+				if ((e != null) && (e.tick())) // if true, then delete
 					screen.entities.remove(i--);
-			try {
-				Thread.sleep((last + TICK_LENGTH) - System.currentTimeMillis());
-			} catch (InterruptedException e) {
-				e.printStackTrace();
 			}
+			screen.repaint();
+			last = System.currentTimeMillis();
 		}
 	}
 	

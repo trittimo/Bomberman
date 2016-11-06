@@ -32,6 +32,8 @@ public class Screen extends JPanel {
 		this.setPreferredSize(new Dimension(800, 800));
 		this.setMinimumSize(new Dimension(800, 800));
 		
+		new Thread(new TickCaller(this)).start();
+		
 		// load l0
 		try {
 			this.player = loadLevel(0);
