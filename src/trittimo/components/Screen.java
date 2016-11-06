@@ -41,8 +41,7 @@ public class Screen extends JPanel {
 			e.printStackTrace();
 		}
 		
-		//add listener
-        
+		System.out.println(player);
 		
 		this.repaint();
 	}
@@ -92,8 +91,8 @@ public class Screen extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		for (Entity e : this.entities) {
-			e.paintComponent(g);
+		for (int i = this.entities.size() - 1; i >= 0; i--) {
+			this.entities.get(i).paintComponent(g);
 		}
 		// Do rendering stuff here
 	}

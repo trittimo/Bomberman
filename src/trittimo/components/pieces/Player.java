@@ -2,6 +2,7 @@ package trittimo.components.pieces;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
 import java.io.File;
 import java.io.IOException;
 
@@ -23,7 +24,8 @@ public class Player extends Entity {
 	}
 
 	public void paintComponent(Graphics g) {
-		System.out.printf("(%d %d)", x, y);
-		g.drawImage(this.i, x * Screen.GRID_SIZE, y * Screen.GRID_SIZE, this.screen);
+		Point p = this.getLocation();
+		//System.out.println(p);
+		g.drawImage(this.i, p.x * Screen.GRID_SIZE, p.y * Screen.GRID_SIZE, this.screen);
 	}
 }

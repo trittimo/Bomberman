@@ -1,6 +1,7 @@
 package trittimo.components.pieces;
 
 import java.awt.Graphics;
+import java.awt.Point;
 
 import javax.swing.JComponent;
 
@@ -33,6 +34,10 @@ public abstract class Entity {
 		this.x = ax;
 		this.y = ay;
 		return true;
+	}
+	
+	public Point getLocation() {
+		return new Point(x, y);
 	}
 	
 	/**

@@ -20,13 +20,13 @@ public class Start {
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_W:
-					screen.player.attemptMove(screen.player.x, screen.player.y + 1);
+					screen.player.attemptMove(screen.player.x, screen.player.y - 1);
 					break;
 				case KeyEvent.VK_A:
 					screen.player.attemptMove(screen.player.x - 1, screen.player.y);
 					break;
 				case KeyEvent.VK_S:
-					screen.player.attemptMove(screen.player.x, screen.player.y - 1);
+					screen.player.attemptMove(screen.player.x, screen.player.y + 1);
 					break;
 				case KeyEvent.VK_D:
 					screen.player.attemptMove(screen.player.x + 1, screen.player.y);
@@ -41,7 +41,7 @@ public class Start {
 			public void keyReleased(KeyEvent e) {}
 		});
 
-		frame.add(new Screen());
+		frame.add(screen);
 		frame.pack();
 		frame.setVisible(true);
 	}

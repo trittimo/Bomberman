@@ -26,12 +26,12 @@ public class Bomb extends Entity {
 	}
 	
 	public void explode(){
-		System.out.println("boom");;
+		System.out.println("boom");
 	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 		g.setColor(Color.BLACK);
-		g.fillOval(this.x, this.y, 50, 50);
+		g.fillOval(this.x * Screen.GRID_SIZE, this.y * Screen.GRID_SIZE, 50, 50);
 	}
 }
