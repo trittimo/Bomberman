@@ -1,5 +1,13 @@
 package trittimo.components.pieces;
 
-public class Wall extends Piece {
+import trittimo.components.Screen;
+
+public class Wall extends Entity {
+
+	@Override
+	public void update(Screen screen) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

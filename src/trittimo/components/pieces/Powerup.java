@@ -1,5 +1,13 @@
 package trittimo.components.pieces;
 
-public class Powerup extends Piece {
+import trittimo.components.Screen;
+
+public class Powerup extends Entity {
+
+	@Override
+	public void update(Screen screen) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

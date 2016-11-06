@@ -2,7 +2,7 @@ package trittimo.components.pieces;
 
 import trittimo.components.Screen;
 
-public class Player extends Entity {
+public class DestructableWall extends Entity {
 
 	@Override
 	public void update(Screen screen) {
