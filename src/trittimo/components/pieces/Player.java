@@ -6,8 +6,8 @@ import trittimo.components.Screen;
 
 public class Player extends Entity {
 	
-	public Player(Screen screen) {
-		super(screen);
+	public Player(Screen screen, int x, int y) {
+		super(screen, x, y);
 	}
 
 	@Override
